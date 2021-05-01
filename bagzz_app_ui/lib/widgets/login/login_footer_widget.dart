@@ -7,13 +7,26 @@ class LoginFooterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Text(
-            'NEW USER? ',
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Text(
+          'NEW USER? ',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 10,
+            fontFamily: 'Work Sans',
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            // ! This function should be navigate to CREATE SCREEN
+          },
+          child: Text(
+            'CREATE ACCOUNT',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.black,
@@ -22,23 +35,8 @@ class LoginFooterWidget extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              // ! This function should be navigate to CREATE SCREEN
-            },
-            child: Text(
-              'CREATE ACCOUNT',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 10,
-                fontFamily: 'Work Sans',
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          )
-        ],
-      ),
+        )
+      ],
     );
   }
 }

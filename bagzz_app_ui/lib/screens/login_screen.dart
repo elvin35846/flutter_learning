@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:bagzz_app_ui/widgets/login/login_footer_widget.dart';
 import 'package:bagzz_app_ui/widgets/login/login_form_widget.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +19,9 @@ class LoginScreen extends StatelessWidget {
             children: <Widget>[
               const Text('This is the Drawer'),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
                 child: const Text('Close Drawer'),
               ),
             ],
@@ -40,13 +44,18 @@ class LoginScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 100),
-          LoginFormWidget(),
-          LoginFooterWidget(),
-          SizedBox(height: 20),
-        ],
+      body: SingleChildScrollView(
+        child: Container(
+            margin: EdgeInsets.only(top: 100),
+            height: MediaQuery.of(context).size.height - AppBar().preferredSize.height-140,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                LoginFormWidget(),
+                LoginFooterWidget(),
+              ],
+            ),
+          ),
       ),
     );
   }
