@@ -67,20 +67,11 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
           onPressed: () {
             // ! FUNCTION WHERE CHECKED CONTROLLERS VALUE AND DO SOMETHING
           },
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color?>(Colors.black),
-            padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
-                EdgeInsets.symmetric(horizontal: 70, vertical: 10)),
-          ),
+          style: AuthTheme.submitButtonStyle,
           child: Text(
             'LOGIN',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-              fontFamily: 'Work Sans',
-              fontWeight: FontWeight.w500,
-            ),
+            textAlign: AuthTheme.sumbitButtonTextAlign,
+            style: AuthTheme.sumbitButtonTextStyle,
           ),
         ),
       ],
