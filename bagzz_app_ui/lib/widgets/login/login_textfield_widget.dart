@@ -1,3 +1,4 @@
+import 'package:bagzz_app_ui/theme/auth_theme.dart';
 import 'package:flutter/material.dart';
 
 class LoginTextfieldWidget extends StatefulWidget {
@@ -19,13 +20,6 @@ class LoginTextfieldWidget extends StatefulWidget {
 }
 
 class _LoginTextfieldWidgetState extends State<LoginTextfieldWidget> {
-  final _borderInputDecoration = OutlineInputBorder(
-    borderSide: BorderSide(
-      color: Colors.black,
-      width: 1,
-    ),
-    borderRadius: BorderRadius.circular(5),
-  );
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -34,19 +28,14 @@ class _LoginTextfieldWidgetState extends State<LoginTextfieldWidget> {
       controller: widget.controller,
       decoration: InputDecoration(
         hintText: widget.hintText,
-        hintStyle: TextStyle(
-          color: Color(0xffd9d9d9),
-          fontSize: 14,
-          fontFamily: 'Work Sans',
-          fontWeight: FontWeight.w500,
-        ),
-        contentPadding: EdgeInsets.all(8.0),
-        border: _borderInputDecoration,
-        errorBorder: _borderInputDecoration,
-        enabledBorder: _borderInputDecoration,
-        focusedBorder: _borderInputDecoration,
-        disabledBorder: _borderInputDecoration,
-        focusedErrorBorder: _borderInputDecoration,
+        hintStyle: AuthTheme.textfieldHintStyle,
+        contentPadding: AuthTheme.textfieldContetPadding,
+        border: AuthTheme.textfieldInputBorder,
+        errorBorder: AuthTheme.textfieldInputBorder,
+        enabledBorder: AuthTheme.textfieldInputBorder,
+        focusedBorder: AuthTheme.textfieldInputBorder,
+        disabledBorder: AuthTheme.textfieldInputBorder,
+        focusedErrorBorder: AuthTheme.textfieldInputBorder,
       ),
     );
   }
