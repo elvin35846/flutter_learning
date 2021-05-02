@@ -1,4 +1,5 @@
 import 'package:bagzz_app_ui/screens/forgot_password_screen.dart';
+import 'package:bagzz_app_ui/theme/auth_theme.dart';
 import 'package:bagzz_app_ui/widgets/login/login_textfield_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -22,13 +23,8 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
       children: [
         Text(
           'SIGN IN',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 24,
-            fontFamily: 'Work Sans',
-            fontWeight: FontWeight.w500,
-          ),
+          textAlign: AuthTheme.titleTextAlign,
+          style: AuthTheme.titleTextStyle,
         ),
         SizedBox(height: 15.0),
         Padding(
