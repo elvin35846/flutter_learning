@@ -1,3 +1,4 @@
+import 'package:bagzz_app_ui/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginFooterWidget extends StatelessWidget {
@@ -24,6 +25,7 @@ class LoginFooterWidget extends StatelessWidget {
         GestureDetector(
           onTap: () {
             // ! This function should be navigate to CREATE SCREEN
+            Navigator.of(context).pushNamed(SignupScreen.routeName);
           },
           child: Text(
             'CREATE ACCOUNT',
