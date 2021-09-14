@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         SignupScreen.routeName: (ctx) => SignupScreen(),
         ForgotPasswordScreen.routeName: (ctx) => ForgotPasswordScreen(),
       },
+      theme: themeValue == 'dark' ? _darkTheme : _lightTheme,
       home: LoginScreen(),
     );
   }
